@@ -1,0 +1,73 @@
+<div
+  class="container m-2 p-3"
+  style="
+    border-radius: 5px;
+    border: solid silver 2px;
+    background-color: rgb(239, 237, 235);
+  "
+>
+  <div class="row">
+    <div class="col">
+      <div class="fw-bold my-3">Pokemon Id & Name:</div>
+      <span class="boxName">#{{ pokemon.id }}</span>
+      <span class="boxName">{{ pokemon.name }}</span>
+    </div>
+    <div class="col-2">
+      <div class="box3 text-center" routerLink="">Go Home</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="fw-bold my-3">Photos:</div>
+    <div class="col">
+      <img class="image" [src]="pokemon.sprites.front_default" alt="pokemon" />
+    </div>
+    <div class="col">
+      <img class="image" [src]="pokemon.sprites.back_default" alt="pokemon" />
+    </div>
+    <div class="col">
+      <img class="image" [src]="pokemon.sprites.front_shiny" alt="pokemon" />
+    </div>
+    <div class="col">
+      <img class="image" [src]="pokemon.sprites.back_shiny" alt="pokemon" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="fw-bold my-3">Abilities:</div>
+      <span class="box" *ngFor="let ability of pokemon.abilities">{{
+        ability.ability.name
+      }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="fw-bold my-3">Experience:</div>
+      <span class="box">{{ pokemon.base_experience }}</span>
+    </div>
+    <div class="col">
+      <div class="fw-bold my-3">Height:</div>
+      <span class="box">{{ pokemon.height }}</span>
+    </div>
+    <div class="col">
+      <div class="fw-bold my-3">Weight:</div>
+      <span class="box">{{ pokemon.weight }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="fw-bold my-3">Moves:</div>
+      <span class="box2" *ngFor="let move of pokemon.moves">{{
+        move.move.name
+      }}</span>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="fw-bold my-3">Types:</div>
+        <span class="box" *ngFor="let type of pokemon.types">{{
+          type.type.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

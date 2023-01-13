@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row searchDiv m-2">
+    <div class="col"></div>
+    <div class="col">
+      <input
+        #searchInput
+        type="text"
+        class="search col-4 px-4"
+        placeholder="Enter a word.."
+        (change)="changeValue(searchInput.value)"
+      />
+      <input
+        type="button"
+        class="bg-secondary col"
+        value="Search"
+        (click)="searchByNameInPage()"
+      />
+      <span class="text-danger fw-bold mx-2">{{ noMatchfoundMessage }}</span>
+    </div>
+  </div>
+  <div class="buttons">
+    <div class="common bg-primary">
+      <div class="selectForm">
+        <label class="labelSelect" for="selectGeneration"
+          >Select Generation:</label
+        >
+        <select
+          #selectGeneration
+          (change)="getPokemonsByGeneration($any($event.target).value)"
+          [(ngModel)]="generationDefault"
+        >
+          <option *ngFor="let generation of generations" [value]="generation">
+            Generation-{{ generation }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="common bg-danger">
+      <input
+        type="button"
+        value="Type"
+        class="btn btn-danger m-1"
+        (click)="sortByType()"
+      />
+    </div>
+    <div class="common bg-danger">
+      <input
+        type="button"
+        value="Sorteer Alfabetisch"
+        class="btn btn-danger m-2"
+        (click)="sortAtoZ()"
+      />
+    </div>
+    <div class="common bg-primary">
+      <input
+        type="button"
+        value="Sorteer Index"
+        class="btn btn-primary m-2 px-3"
+        (click)="sortById()"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="searchResults.length > 0">
+    <h3 class="text-success m-2 text-center">Searh Results:</h3>
+    <div class="px-4">
+      <input
+        class="container-fluid closeBtn"
+        type="button"
+        value="Close"
+        (click)="closeSearchResults()"
+      />
+    </div>
+
+    <div
+      class="pokemons m-4 border border-success"
+      style="background-color: rgb(218, 217, 217)"
+    >
+      <app-pokemon
+        *ngFor="let pokemon of searchResults"
+        [pokemonDetails]="pokemon"
+      ></app-pokemon>
+    </div>
+  </div>
+
+  <div class="pokemons">
+    <app-pokemon
+      *ngFor="let pokemon of pokemons"
+      [pokemonDetails]="pokemon"
+    ></app-pokemon>
+  </div>
+</div>

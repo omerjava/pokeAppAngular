@@ -1,0 +1,20 @@
+<div class="container px-4 py-2">
+  <div class="row photo">
+    <img
+      class="image"
+      [src]="pokemonDetails.sprites.front_default"
+      [alt]="pokemonDetails.name"
+      [routerLink]="['pokemon', pokemonDetails.id]"
+    />
+  </div>
+  <div class="row content">
+    <div>#{{ pokemonDetails.id }}</div>
+    <div class="name">{{ pokemonDetails.name }}</div>
+  </div>
+  <div class="row types">
+    <div class="type">{{ pokemonDetails.types[0].type.name }}</div>
+    <div [ngClass]="pokemonDetails.types[1] == null ? 'none' : 'type'">
+      {{ pokemonDetails.types[1]?.type.name }}
+    </div>
+  </div>
+</div>

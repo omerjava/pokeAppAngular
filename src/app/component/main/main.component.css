@@ -1,0 +1,67 @@
+.searchDiv {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  margin: 5px;
+}
+
+.closeBtn {
+  background-color: rgb(106, 20, 20);
+  color: white;
+  border-radius: 3px;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+  background-color: rgb(139, 21, 21);
+  color: white;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+  text-align: center;
+  border: solid 1px silver;
+  border-radius: 5px;
+}
+
+.common {
+  text-align: center;
+  border-radius: 5px;
+}
+
+#selectGeneration {
+  background-color: blue;
+  margin: 10px;
+}
+
+.selectForm {
+  padding-top: 12px;
+}
+
+.labelSelect {
+  color: rgb(240, 235, 235);
+  font-size: medium;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  .pokemons {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .pokemons {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}

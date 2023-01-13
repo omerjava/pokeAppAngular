@@ -1,0 +1,35 @@
+.content {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    color: brown;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.types {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.type {
+    border: 2px brown solid;
+    margin: 4px;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: rgb(240, 236, 197);
+    color: rgb(62, 63, 57);
+    font-size: small;
+
+}
+
+.none {
+    display: none;
+}
+
+.image:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}

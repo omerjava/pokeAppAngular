@@ -1,0 +1,51 @@
+.boxName {
+  margin-right: 2px;
+  padding: 6px;
+  border: 2px rgb(246, 239, 239) solid;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 500;
+  background-color: rgb(33, 2, 2);
+  color: rgb(240, 233, 233);
+}
+
+.box {
+  margin-right: 2px;
+  padding: 4px;
+  border: 1px silver solid;
+  border-radius: 5px;
+  font-size: smaller;
+  background-color: brown;
+  color: rgb(240, 227, 227);
+}
+
+.box2 {
+  margin-right: 2px;
+  padding: 4px;
+  border: 1px silver solid;
+  border-radius: 5px;
+  font-size: smaller;
+  background-color: rgb(223, 247, 198);
+  color: rgb(18, 32, 21);
+}
+
+.box3 {
+  margin-right: 2px;
+  padding: 5px;
+  border: 1px silver solid;
+  border-radius: 5px;
+  font-size: smaller;
+  background-color: rgb(237, 227, 26);
+  color: rgb(18, 32, 21);
+  font-weight: 600;
+}
+
+.box3:hover {
+  background-color: rgb(250, 242, 89);
+  color: rgb(18, 32, 21);
+  cursor: pointer;
+}
+
+.image {
+  transform: scale(1.4);
+}
