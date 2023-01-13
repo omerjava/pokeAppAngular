@@ -2,7 +2,7 @@
 
 ## About
 
-By using [PokeApi](https://pokeapi.co/), I have developed a PokeApp in which you can:
+By using [PokeApi](https://pokeapi.co/), I have developed a PokeApp with Angular and Bootstrap in which you can:
  - Choose pokemon generation and see all Pokemons in that generation with their Id, Name, Photo and Types.
  - Sort pokemons in certain generation by A-Z, Id, Type.
  - Click to photo of pokemon to see details of pokemon in another page.
